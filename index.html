@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+        <a-sky color="lightblue"></a-sky>
+        <a-plane position="0 0 0" rotation="-90 0 0" height="10000" width="10000" color="grey"></a-plane>
+        <a-sphere position="10 10 10" radius="1" color="lime" easing="easeIn"
+        animation="
+        property: position;
+        from: 10 10 -10;
+        to: -10 -10 -20;
+        loop: true;
+        dur: 2000;
+        dir: alternate
+        "
+        animation__2="
+        property: opacity;
+        from: 1;
+        to: 0;
+        dur: 1000;
+        startEvents: mouseenter;
+        "
+        ></a-sphere>
+        </a-scene>
+    </body>
+</html>
