@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     </head>
     <body>
         <a-scene>
@@ -51,6 +51,40 @@
         to: -10 0 0;
         loop: true;
         dur: 6000;
+        dir: alternate;
+        "
+        animation__2="
+        property: opacity;
+        from: 1;
+        to: 0;
+        dur: 1000;
+        startEvents: click;
+        "
+        ></a-box>
+        <a-sphere position="5 1 0" radius="1" color="yellow"
+        animation="
+        property: position;
+        from: 20 10 0;
+        to: -20 10 0;
+        loop: true;
+        dur: 2000;
+        dir: alternate;
+        "
+        animation__2="
+        property: opacity;
+        from: 1;
+        to: 0;
+        dur: 1000;
+        startEvents: click;
+        "
+        ></a-sphere>
+        <a-box position="6 0 100" height="2" width="2" depth="2" color="blue"
+        animation="
+        property: position;
+        from: 6 0 -100;
+        to: 6 0 100;
+        loop: true;
+        dur: 5000;
         dir: alternate;
         "
         animation__2="
